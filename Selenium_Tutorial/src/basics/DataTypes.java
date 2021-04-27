@@ -2,7 +2,7 @@ package basics;
 
 public class DataTypes {
 
-	public static <Java> void main(String[] args) {
+	public static void main(String[] args) {
 		
 		/*
 		 * Java language is a case senstitive and high level language Primitive
@@ -40,6 +40,21 @@ public class DataTypes {
 		System.out.println("Double value of f is : " + f);
 		System.out.println("Char value of g is : " + g);
 		System.out.println("Boolean value of h is : " + h);
+		
+		
+		/*
+		 * Lexeme : Smallest logical unit in java programming is called as "Lexeme"
+		 * Token : The collection of lexemes come under a particular group is called as "Token"
+		 * int a=b+c*d;
+		 * Lexemes : int,a,=,b,+,c,*,d,;
+		 * 
+		 * Tokens:
+		 * 
+		 * 1. Data Types
+		 * 2. Identifiers
+		 * 3. Operators
+		 * 4. Special Symbols
+		 */
 		
 
 	}
