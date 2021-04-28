@@ -22,7 +22,7 @@ public class DataTypes {
 		 * 4. Press Ctrl + F11
 		 * */
 				
-		byte a=122; // 1 byte = 8 bits
+		byte a=112; // 1 byte = 8 bits
 		short b=4544; // 2 bytes = 16 bits
 		int c=23425; // 4 bytes
 		long d = 2453456; // 8 bytes
