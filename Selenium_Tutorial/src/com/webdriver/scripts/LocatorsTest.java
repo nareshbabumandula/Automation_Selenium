@@ -1,40 +1,58 @@
 package com.webdriver.scripts;
 
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class LocatorsTest {
 
 	static WebDriver driver;
 
-	public static void main(String[] args) {
-
-		//System.setProperty("webdriver.ie.driver", ".\\browsers\\IEDriverServer.exe");
-		//System.setProperty("webdriver.chrome.driver", ".\\browsers\\chromedriver.exe");
-		//System.setProperty("webdriver.gecko.driver", ".\\browsers\\geckodriver.exe");
-		System.setProperty("webdriver.edge.driver", ".\\browsers\\msedgedriver.exe");
-		
-		// Set capability of IE driver to Ignore all zones browser protected mode settings.
-		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-		caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-
-		// Initialize InternetExplorerDriver Instance using new capability.
-		//WebDriver driver = new InternetExplorerDriver(caps);
-		//driver = new ChromeDriver();
-		//driver = new FirefoxDriver();
-		driver = new EdgeDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.get("https://blazedemo.com/");
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\browsers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.mycontactform.com/");
 		driver.manage().window().maximize();
-		System.out.println(driver.getTitle());
-		System.out.println(driver.getCurrentUrl());
+
+		// Enter data in User Name field using ID locator
+		driver.findElement(By.id("user")).sendKeys("naresh223");
+		Thread.sleep(1000);
+		driver.findElement(By.id("user")).clear();
+	
+		// Enter data in User Name field using Name locator
+		driver.findElement(By.name("user")).sendKeys("Srikanth");
+		Thread.sleep(1000);
+		driver.findElement(By.name("user")).clear();
+	
+		// Enter data in User Name field using className locator
+		driver.findElement(By.className("txt_log")).sendKeys("Gunjan");
+		Thread.sleep(1000);
+		driver.findElement(By.className("txt_log")).clear();
+	
+		// Enter data in User Name field using XPath with attributes locator
+		driver.findElement(By.xpath("//input[@id='user']")).sendKeys("Ravi");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@id='user']")).clear();
+		
+
+		// Enter data in User Name field using CSS locator
+		driver.findElement(By.cssSelector("input[id='user']")).sendKeys("Ruken");
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[id='user']")).clear();
+		
+		// Enter data in User Name field using CSS locator with # as a replacement for ID
+		driver.findElement(By.cssSelector("input#user")).sendKeys("Madhu");
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input#user")).clear();
+				
+		// Enter data in User Name field using CSS locator with . as a replacement for Classname
+		driver.findElement(By.cssSelector("input.txt_log")).sendKeys("Manideep");
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input.txt_log")).clear();
+	
+		Thread.sleep(3000);
 		driver.quit();
+
 
 	}
 
