@@ -34,7 +34,6 @@ public class LocatorsTest {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@id='user']")).clear();
 		
-
 		// Enter data in User Name field using CSS locator
 		driver.findElement(By.cssSelector("input[id='user']")).sendKeys("Ruken");
 		Thread.sleep(1000);
