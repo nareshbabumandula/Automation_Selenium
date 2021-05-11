@@ -6,6 +6,8 @@ public class MethodOverloadTest {
 	 * in the type of the parameters or no of parameters
 	 * Concrete java methods, constructor and static methods can be overloaded 
 	 * */
+	
+	static String USERNAME = "naresh";
 		
 	public void login() {
 		System.out.println("Successfully logged into the application");
