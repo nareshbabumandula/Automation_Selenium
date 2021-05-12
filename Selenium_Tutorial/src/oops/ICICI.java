@@ -13,12 +13,14 @@ public class ICICI implements RBI{
 		ic.creditCard();
 		ic.Loans();
 		RBI.demat();
+		System.out.println(ic.accountNo);
+		System.out.println(balance);
 	}
 
 	@Override
 	public void minDeposit() {
+		// implementation or logic or code
 		System.out.println("minDeposit is 500 rupees only..!");
-		
 	}
 
 	@Override

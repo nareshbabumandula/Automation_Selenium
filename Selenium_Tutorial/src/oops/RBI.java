@@ -1,6 +1,9 @@
 package oops;
 
-public interface RBI {
+public interface RBI extends Banking, FederalReserve{
+	
+	int accountNo = 23422;
+	static int balance = 1000;
 
 	abstract void minDeposit();
 	abstract void minWithDrawl();

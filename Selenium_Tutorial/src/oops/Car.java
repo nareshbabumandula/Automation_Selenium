@@ -4,7 +4,6 @@ public abstract class Car {
 	
 	// Concrete java method
 	void Speed() {
-		// Method body or implementation
 		System.out.println("Speed is 100 KMPH");
 	}
 	
