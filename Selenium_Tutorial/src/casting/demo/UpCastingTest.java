@@ -1,7 +1,7 @@
 package casting.demo;
 
 class Parent {
-	
+	int a=10;
 	void Demo() {
 		System.out.println("Demo method from Parent class");
 	}
@@ -9,6 +9,7 @@ class Parent {
 }
 
 class Child extends Parent{
+	int a=20;
 	void Demo() {
 		System.out.println("Demo method from Child class");
 	}
@@ -24,7 +25,13 @@ public class UpCastingTest{
 		
 		Parent p = new Child(); // Upcasting
 		p.Demo();
+		System.out.println(p.a);
 		
+		//Downcasting
+		//Child c = new Parent(); // Compilation error
+		Child c = (Child)p;
+		c.Demo();
+		System.out.println(c.a);
 	}
 	
 }
