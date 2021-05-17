@@ -18,12 +18,8 @@ public abstract class Car {
 		System.out.println("Ford Figo 2021 VXI");
 	}
 	
-	public Car() {
-		System.out.println("Car Constructor");
-	}
-
 	public static void main(String[] args) {
-		//Car c = new Car();
+		
 		Model();
 	}
 

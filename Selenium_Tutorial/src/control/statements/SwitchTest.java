@@ -1,14 +1,9 @@
 package control.statements;
 
-import java.util.Scanner;
-
 public class SwitchTest {
-	
-	public void SwitchExample() {
-		System.out.println("Enter any day..!");
-		Scanner sc = new Scanner(System.in);
-		String strDay = sc.next();
-		switch (strDay) {
+
+	public void SwitchExample(String strDay) {
+		switch (strDay.toLowerCase().trim()) {
 		case "sun": case "sund":
 			System.out.println("Sunday");
 			break;
@@ -38,7 +33,7 @@ public class SwitchTest {
 
 	public static void main(String[] args) {
 		SwitchTest st = new SwitchTest();
-		st.SwitchExample();
+		st.SwitchExample("   FRI    ");
 
 	}
 
