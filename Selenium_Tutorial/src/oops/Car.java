@@ -5,6 +5,8 @@ public abstract class Car {
 	// Concrete java method
 	void Speed() {
 		System.out.println("Speed is 100 KMPH");
+		System.out.println("Speed is 100 KMPH");
+		
 	}
 	
 	// Unimplemented body or abstract method or bodyless method or method without body

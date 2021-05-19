@@ -22,6 +22,9 @@ public class IfTest {
     public void ifElseExample() {
     	if (a>b) {
 			System.out.println("a is greater than b");
+			if (a>10) {
+				System.out.println("a is greater than 10");
+			}
 		}else {
 			System.out.println("a is less than b");
 		}
@@ -40,9 +43,9 @@ public class IfTest {
   	public static void main(String[] args) {
 		IfTest it = new IfTest();
 		//it.ifExample();
-		//it.ifElseExample();
+		it.ifElseExample();
 		//it.ifElseIfElseExample();
-		it.enhancedIf();
+		//it.enhancedIf();
 	}
 
 }
