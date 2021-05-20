@@ -31,6 +31,13 @@ public class DataTypes {
 		char g = 'j'; // 2 bytes
 		boolean h = true; // 1 bit
 		
+		System.out.println("Min value of byte is : " + Byte.MIN_VALUE);
+		System.out.println("Max value of byte is : " + Byte.MAX_VALUE);
+		System.out.println("Min value of short is : " + Short.MIN_VALUE);
+		System.out.println("Max value of short is : " + Short.MAX_VALUE);
+		System.out.println("Min value of integer is : " + Integer.MIN_VALUE);
+		System.out.println("Max value of integer is : " + Integer.MAX_VALUE);
+					
 		//sysout + ctrl + spacebar
 		System.out.println("Byte value of a is : " + a);
 		System.out.println("Short value of b is : " + b);
@@ -40,8 +47,7 @@ public class DataTypes {
 		System.out.println("Double value of f is : " + f);
 		System.out.println("Char value of g is : " + g);
 		System.out.println("Boolean value of h is : " + h);
-		
-		
+				
 		/*
 		 * Lexeme : Smallest logical unit in java programming is called as "Lexeme"
 		 * Token : The collection of lexemes come under a particular group is called as "Token"
