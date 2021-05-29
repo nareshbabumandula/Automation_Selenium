@@ -22,11 +22,14 @@ public class CastingTest {
 		 * ii. Explicit Type Casting/Narrowing : The process of converting higher data type to lower
 		 * date type is called as Explicit Type casting
 		 */
+		System.out.println("Implicit and explict casting examples..!");
 		short s = 129;
-		int i = s;
+		int i = s; // Widening
 		System.out.println("Implicit casting : " + i);
+		// Narrowing
 		byte b = (byte) i;
 		System.out.println(b);
+		
 	}
 
 }
