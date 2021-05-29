@@ -22,7 +22,7 @@ public class OverloadingInSelenium {
 		WebElement frameweblement = driver.findElement(By.xpath("//iframe[@src='/resources/demos/autocomplete/default.html']"));
 		driver.switchTo().frame(frameweblement);
 		driver.findElement(By.id("tags")).sendKeys("Selenium");
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		driver.quit();
 	}
 
