@@ -10,9 +10,9 @@ public class LocatorsTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", ".\\browsers\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(); // Instanciate ChromeDriver
 		driver.get("https://www.mycontactform.com/");
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); // Maximie the browser window
 
 		// Enter data in User Name field using ID locator
 		driver.findElement(By.id("user")).sendKeys("naresh223");
@@ -51,6 +51,7 @@ public class LocatorsTest {
 	
 		Thread.sleep(3000);
 		driver.quit();
+		System.out.println("Successfully performed actions on objects using various locators..!");
 
 
 	}
