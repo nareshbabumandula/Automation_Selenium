@@ -35,7 +35,8 @@ public class TestExample extends Homepage{
 		USERID.clear();
 		PWD.clear();
 		
-	
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		
 	}
 	
 	@Test(enabled = true)

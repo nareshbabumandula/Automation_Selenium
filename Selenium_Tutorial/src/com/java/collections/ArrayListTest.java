@@ -11,7 +11,7 @@ public class ArrayListTest {
 		ArrayList<String> list = new ArrayList<String>();
 
 		List li = new ArrayList();
-				
+
 		list.add("Naresh");
 		list.add("Rajesh");
 		list.add("Gunjan");
@@ -54,13 +54,35 @@ public class ArrayListTest {
 		System.out.println("List elements are : " + list);
 		System.out.println("List1 elements are : " + list1);
 		
-		
+			
 		System.out.println("Iteration Starts.....");
 		// Iterate and traverse through Iterator
 		Iterator iter = list.iterator();
 		while(iter.hasNext()) {
 			System.out.println(iter.next());
 		}
+		
+		// Iterate through collection using lambda
+		System.out.println("Iterating through collection using lambda");
+		list.forEach((n)->System.out.println(n));
+		
+		/* Lambda expression consists of 3 components 
+		 * 1. Argument list - It can be empty or non empty
+		 * 2. Arrow Token: -> - It is used to link the arguments list and the body or code
+		 * 3. Body- It contains expression and logical statements for the lamnda expression
+		 * 
+		 * Lambda expression types:
+		 * 1. No parameter syntax : ()->{Body}
+		 * 2. One parameter syntax : (p)->{Body}
+		 * 3. Two parameters syntax : (p1, p2)->{Body}
+		 * */
+		
+		list
+	    .stream()
+	    .filter(s -> s.startsWith("R"))
+	    .map(String::toUpperCase)
+	    .sorted()
+	    .forEach(System.out::println);
 			
 	}
 	

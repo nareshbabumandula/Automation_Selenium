@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Stack;
 import java.util.Vector;
 
-
+/*
+ * The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. 
+ * The stack contains all of the methods of Vector class and also provides its methods like boolean push(),
+ * boolean peek(), boolean push(object o), which defines its properties.
+ */
 public class StackTest {
 	
 	// Stack uses dynamic array for storing the elements. It is synchronized
@@ -18,7 +22,7 @@ public class StackTest {
 		//Vector stack = new Stack(); // Upcasting
 		
 		Stack<String> stack = new Stack<String>(); // Homogeneous data
-		
+			
 		Stack<String> stack1 = new Stack<String>(); // Homogeneous data
 		stack1.push("Kiran");
 		stack1.push("Hari");
