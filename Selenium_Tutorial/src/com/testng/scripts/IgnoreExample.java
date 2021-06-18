@@ -1,29 +1,23 @@
 package com.testng.scripts;
 
-import java.util.List;
-import java.util.Set;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import com.object.repository.Homepage;
 
-public class TestExample extends Homepage{
+@Ignore
+public class IgnoreExample extends Homepage{
 	
 	WebDriver driver;
 
-	@Test(invocationCount = 2)
+	@Ignore
 	public void login() {
 
-		// WebDriver coding without Page Object Model
-		//driver.findElement(By.id("user")).sendKeys("Gunjan");
-		//driver.findElement(By.id("pass")).sendKeys("Secure*123");
-		
 		// WebDriver coding with Page Object Model
 		WebElement USERID = driver.findElement(USERNAME);
 		WebElement PWD = driver.findElement(PASSWORD);
@@ -35,7 +29,7 @@ public class TestExample extends Homepage{
 		USERID.clear();
 		PWD.clear();
 		
-	
+		
 	}
 	
 	@Test(enabled = true)

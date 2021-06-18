@@ -1,24 +1,23 @@
 package com.testng.scripts;
 
-import java.util.List;
-import java.util.Set;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.object.repository.Homepage;
 
-public class TestExample extends Homepage{
+public class TestWithParametersExample extends Homepage{
 	
 	WebDriver driver;
-
-	@Test(invocationCount = 2)
-	public void login() {
+	
+	@Parameters({"strUsername","strPassword"})
+	@Test()
+	public void login(@Optional("strUsername") String strUsername, @Optional("strPassword") String strPassword) {
 
 		// WebDriver coding without Page Object Model
 		//driver.findElement(By.id("user")).sendKeys("Gunjan");
@@ -27,15 +26,21 @@ public class TestExample extends Homepage{
 		// WebDriver coding with Page Object Model
 		WebElement USERID = driver.findElement(USERNAME);
 		WebElement PWD = driver.findElement(PASSWORD);
+		if (strUsername.isEmpty()) {
+			System.out.println("Username is blank");
+			USERID.sendKeys("Manideep");
+		}else {
+			USERID.sendKeys(strUsername);
+		}
 		
-		USERID.sendKeys("Manideep");
-		PWD.sendKeys("Ignorance");
+	
+		PWD.sendKeys(strPassword);
 		String actPassword = PWD.getAttribute("value");
 		Assert.assertEquals(actPassword, "Ignorance"); // Assertion
 		USERID.clear();
 		PWD.clear();
 		
-	
+		
 	}
 	
 	@Test(enabled = true)
