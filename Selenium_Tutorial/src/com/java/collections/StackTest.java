@@ -34,6 +34,8 @@ public class StackTest {
 		stack.push("Nishanth");
 		stack.push("Riya");
 		stack.pop(); // Removes the lastly inserted element
+		System.out.println(stack);
+		
 		stack.peek();  // Retrieves the top element
 		System.out.println(stack.peek());
 		stack.addAll(stack1);
