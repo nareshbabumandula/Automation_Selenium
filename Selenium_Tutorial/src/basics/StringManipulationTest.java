@@ -59,8 +59,7 @@ public class StringManipulationTest {
 		
 		System.out.println(sText1.compareTo("hello1"));
 		System.out.println(sText2.isEmpty());
-		System.out.println(sText2.isBlank());
-		
+	
 		char[] res = sText1.toCharArray();
 		for (char c : res) {
 			System.out.println(c);

@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
-public class GroupsTest extends CommonSteps{
+public class GroupsTest {
 	
 	@BeforeTest
 	public void launchBrowser() {
