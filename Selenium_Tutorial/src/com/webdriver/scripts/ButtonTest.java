@@ -21,7 +21,7 @@ public class ButtonTest {
 	}
 
 	@Test
-	public void textboxMethods() throws InterruptedException {
+	public void buttonMethods() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://www.mycontactform.com/"); // Load a new web page in the current browser window. 
 		driver.manage().window().maximize(); // Maximize the browser window

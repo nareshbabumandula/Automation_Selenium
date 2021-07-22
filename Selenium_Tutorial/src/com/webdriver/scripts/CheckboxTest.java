@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ImageTest {
+public class CheckboxTest {
 
 	WebDriver driver;
 
@@ -21,21 +21,28 @@ public class ImageTest {
 	}
 
 	@Test
-	public void imageMethods() throws InterruptedException {
+	public void checkboxMethods() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://www.mycontactform.com/"); // Load a new web page in the current browser window. 
 		driver.manage().window().maximize(); // Maximize the browser window
-		WebElement imgTestimonial = driver.findElement(By.className("test_img"));
-		System.out.println("Src attribute value is : " + imgTestimonial.getAttribute("src"));
-		System.out.println("Alt attribute value is : " + imgTestimonial.getAttribute("alt"));
-		System.out.println("Class attribute value is : " + imgTestimonial.getAttribute("class"));
-		System.out.println("Html tag name for the image is : " + imgTestimonial.getTagName());
 		
-	    System.out.println(imgTestimonial.isDisplayed());
-		System.out.println(imgTestimonial.isEnabled());
+		driver.findElement(By.linkText("Sample Forms")).click();
 		
-		// Click on image
-		imgTestimonial.click();
+		WebElement chkMarketing = driver.findElement(By.name("email_to[]"));
+		System.out.println("Type attribute value is : " + chkMarketing.getAttribute("type"));
+		System.out.println("Name attribute value is : " + chkMarketing.getAttribute("name"));
+		System.out.println("Value attribute value is : " + chkMarketing.getAttribute("value"));
+		System.out.println("Html tag name for the checkobox is : " + chkMarketing.getTagName());
+		
+	    System.out.println(chkMarketing.isDisplayed());
+		System.out.println(chkMarketing.isEnabled());
+		System.out.println("Checkbox selection status before is : " + chkMarketing.isSelected());
+		
+		// Select the checkbox
+		chkMarketing.click();
+		
+		System.out.println("Checkbox selection status after is : " + chkMarketing.isSelected());
+		
 		
 	}
 
